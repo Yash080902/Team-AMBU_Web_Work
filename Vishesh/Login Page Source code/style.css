@@ -4,34 +4,39 @@ body {
     font-family: 'Kadwa', Calibri, serif;
     margin: 0px;
     width: 100%;
+
     
 }
 
 /* Adding style to navbar */
 
-.header {
+#header {
     display: flex;
     justify-content: space-between;
+    transition: 0.3s;
     align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
-    height: 4rem;
+    height: 4.5rem;
     background-color:#fff;
     box-shadow: 0px 4px 4px;
+    z-index: 10;
 
 }
 
 
-    .left-header {
+    #left-header {
         height: inherit;
     }
 
     /* For AMBU logo */
 
-    .left-header img {
-        height: 4.25rem;
+    #left-header img {
+        height: 4.75rem;
         margin-left: 4px;
+        transition: 0.3s;
+
     }
 
     /* for navbar option */
@@ -69,9 +74,11 @@ body {
 
         .right-header-element a:hover{
             background-color: #e85a4f;
-            padding: 0.1rem;
+            padding: 0.5rem;
             color: white;
             border-radius: 0.7rem;
+            text-shadow: 2px 2px 1px rgb(199, 198, 198);
+
         }
 
         .right-header-element abbr {
@@ -91,9 +98,10 @@ body {
     
 /* Main body divided to to sub body using flex */
 
-.content {
+#content {
     display: flex;
-    margin-top: 4rem;
+    margin-top: 4.5rem;
+    transition: 0.3s;
     justify-content: space-between;
     background-image: url(images/operationBG.png);
     background-size: cover;
@@ -211,6 +219,7 @@ body {
 
             .login-form input::placeholder{
                 font-size: 1.5rem;
+                color: rgb(68, 64, 64);
                 text-shadow: 2px 2px 2px black;
 
             }
@@ -247,9 +256,10 @@ body {
 
             .theme p {
                 /* text-orientation: upright; */
-                /* writing-mode: vertical-rl; */
-                writing-mode: sideways-lr;
+                /* writing-mode: sideways-lr; */
+                writing-mode: vertical-rl;
                 margin: 70% 0% 70% 0%;
+                rotate: 180deg;
                 text-align: center;
                 padding: 4px 0px 0px 0px;
                 color: white;

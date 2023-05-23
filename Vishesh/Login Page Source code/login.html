@@ -16,12 +16,12 @@
 
     <!-- Creating Navbar -->
 
-    <div class="header">
+    <div id="header">
 
         <!-- Creating left side of navbar that contain AMBU logo -->
 
-        <div class="left-header">
-            <abbr title="AMBU logo"><a href="#"> <img src="images/logo.png" alt="AMBU Logo"> </a></abbr>
+        <div id="left-header">
+            <abbr title="AMBU logo"><a href="#"> <img src="images/logo.png" alt="AMBU Logo" id="logo"> </a></abbr>
         </div>
 
         <!-- Creating right side of navbar that contain navigation option -->
@@ -61,7 +61,7 @@
 
     <!-- Creating container to store content -->
 
-    <div class="content">
+    <div id="content">
 
         <!-- It contain AMBU, Tag line and download apk button-->
 
@@ -101,7 +101,7 @@
 
                         <div class="input-icons">
                             <i class="fa fa-user icon" ></i>
-                            <input class="input-field"
+                            <input class="input-field" id="input-field"
                                 type="text"
                                 placeholder="Mobile No. /Email">
                         </div>
@@ -109,7 +109,7 @@
             
                         <div class="input-icons">
                             <i class="fa fa-key icon"></i>
-                            <input class="input-field"
+                            <input class="input-field" id="input-field"
                                 type="password"
                                 placeholder="OTP">
                         </div>
@@ -210,6 +210,28 @@
             </div>
         </div>
     </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            document.getElementById("header").style.height = "3.4rem";
+            document.getElementById("logo").style.height = "3.8rem";
+            document.getElementById("content").style.marginTop = "3.4rem";
+
+        } else {
+            document.getElementById("header").style.height = "4.5rem";
+            document.getElementById("logo").style.height = "4.75rem";
+            document.getElementById("content").style.marginTop = "4.5rem";
+
+        }
+        } 
+
+        window.onload = function() {
+        document.getElementById('input-field').value = '';
+        }
+    </script>
     
 </body>
 </html>
