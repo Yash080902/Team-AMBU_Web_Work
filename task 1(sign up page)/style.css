@@ -1,0 +1,187 @@
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    border-bottom: 1px solid white;
+    position: sticky;
+}
+header ul{
+    list-style-type: none;
+    display: flex;
+    align-items:center ;
+}
+header ul a {
+    text-decoration: none;
+    color: black;
+    text-emphasis-style: bold;
+    padding: 0 1.5rem;
+    font-size:1.4rem;
+}
+.logo{
+    width: 250px;
+
+}
+.lang a,.login a{
+    padding-left:0 3rem;
+    padding-right: 0 1rem;
+
+}
+
+
+header nav{
+    background-color: white; 
+    max-width: 100%;
+    margin:0 auto;
+    padding: 0 2rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+#surgery{
+    background-image: url("images/surgery-1822458_1280\ 1.png");
+    height:100vh;
+    width:100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+#transparent{
+    background-image: url("images/transparent\ rec.png");
+    height:100vh;
+    width:50vw;
+    position: absolute;
+    right: 0px;
+    box-shadow: none;
+}
+#ambu{
+    position: absolute;
+    left:50px;
+    top: 150px;
+    size:40px;
+}
+#unified{
+    position:absolute;
+    left:50px;
+    top:300px;
+    font-size: 50px;
+    color: #e7e7e7;
+}
+#chatbox{
+    position: fixed;
+    bottom: 0%;
+    right: 0.5%;
+    max-height: 80px;
+    width: auto;
+   
+}   
+#sidebar{
+    position:absolute;
+    right:0%;
+    top:0%;
+    size: 100px;
+    max-height: 450px;
+    width: 100px;
+}
+#signup{
+    position:absolute;
+    right: 340px;
+    top: 50px;
+    max-width: 200px;
+    height: auto;
+
+}
+#name{
+    padding: 14px 40px;
+    font-size: 24px;
+    background-color: #e7e7e7; color: rgb(103, 100, 100);
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;;
+    height: 60px;
+    border-color: #e7e7e7;
+    position: absolute;
+    right: 245px;
+    top: 170px;
+    background-image: url("images/🦆\ icon\ _Identification_.png");
+    background-repeat: no-repeat;
+    background-position: left,center;
+    background-position-x: 10px;
+}
+#mobile{
+    padding: 14px 40px;
+    font-size: 24px;
+    background-color: #e7e7e7; color: rgb(103, 100, 100);
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;;
+    height: 60px;
+    border-color: #e7e7e7;
+    position: absolute;
+    right: 245px;
+    top: 240px;
+    background-image: url("images/🦆\ icon\ _phone_.png");
+    background-repeat: no-repeat;
+    background-position: left,center;
+    background-position-x: 10px;
+    
+}
+#password{
+    padding: 14px 40px;
+    font-size: 24px;
+    background-color: #e7e7e7; color: rgb(103, 100, 100);
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;;
+    height: 60px;
+    border-color: #e7e7e7;
+    position: absolute;
+    right: 245px;
+    top: 310px;
+    background-image: url("images/🦆\ icon\ _lock_.png");
+    background-repeat: no-repeat;
+    background-position: left,center;
+    background-position-x: 10px;
+}
+#re-password{
+    padding: 14px 40px;
+    font-size: 24px;
+    background-color: #e7e7e7; color: rgb(103, 100, 100);
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;;
+    height: 60px;
+    border-color: #e7e7e7;
+    position: absolute;
+    right: 245px;
+    top: 380px;
+    background-image: url("images/🦆\ icon\ _key_.png");
+    background-repeat: no-repeat;
+    background-position: left,center;
+    background-position-x: 10px;
+}
+#login{
+    position: absolute;
+    top:475px;
+    right: 480px;
+}
+#emergency{
+    position:absolute;
+    top:480px;
+    right:95px;   
+}
+
+#line{
+    position:absolute;
+    top:480px;
+    right:405px;
+}
