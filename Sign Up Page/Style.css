@@ -66,11 +66,12 @@ body {
 .right-header-element abbr {
     text-decoration: none;
 }
-
-/* Profile icon */
-.pic {
-    height: 2.5rem; 
+.right-header-element abbr:hover{
+    background-color: #cecece;
+    padding: .4rem;
 }
+
+
     
 /* Body */
 #content {
@@ -144,27 +145,52 @@ body {
 
 .Signup-form{
     width: 100%;
-    margin-left: 10%;
+    margin-left: 4%;
     align-items: center;
-    margin-top: 2rem;  
-    margin: 1rem;  
+    /* margin-top: 2rem;  
+    margin: 1rem;   */
     font-family: 'Kadwa',serif;
 }
 
 .input-icons {
     width: 100%;
-    margin-top:1.5rem;
+    margin-top:1.4rem;
 }
 
 .input-field {
     width: 60%;
-    padding: 1rem;
+    padding: 0.8rem;
     text-align: center;
     background-color: #d9d9d9;
     border: #d9d9d9;
     border-radius: 1rem;
     font-size: 1.1rem;
+    
 }
+
+input[type="text"],[type="mob"],[type="password"]
+{
+    font-size:1.9rem;
+}
+
+
+
+.login-form .signin {
+    margin-top: 7vh;
+}
+
+.Proceed button {
+    width: 65%;
+    height: 3.4rem;
+    font-size: 1.8rem;
+    background-color:#20b038;
+    border-radius: 1rem;
+    color: black;
+    font-weight: bolder;
+    margin-top: 1.4rem;
+    font-family: 'Kadwa', serif;
+}
+
 #fullname {
     background-image: url(images/🦆\ icon\ _Identification_.png);
     background-repeat: no-repeat;
@@ -231,11 +257,15 @@ body {
     /*chatbox */
 .chatbox img {
     margin: 0.5rem;
-    width: 4.5rem;
+    width: 4.3rem;
     margin-right: 0.5rem;
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+.chatbox :hover{
+    width:6rem;
 }
 
 button {

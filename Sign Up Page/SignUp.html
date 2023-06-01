@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                       
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&family=Kadwa:wght@700&display=swap" rel="stylesheet">
@@ -39,8 +40,8 @@
             <!-- Dropdown list for language -->
 
             <div class="right-header-element">
-                <select name="language" id="language" >
-                    <option value="default-language">Language</option>
+                <select name="language" id="language">
+                    <!-- <option value="default-language">Language</option> -->
                     <option value="english">English</option>
                     <option value="hindi">हिंदी</option>
                     <option value="tamil">தமிழ்</option>
@@ -51,7 +52,7 @@
             <!-- profile icon -->
 
             <div class="right-header-element">
-                <img class="pic" src="images/login.png">
+                <a href="#"><i class='fa fa-user-circle-o fa-lg'></i></a>
             </div>
         </div>
     </div>
@@ -73,7 +74,7 @@
                             align-items: center;
                             width: 20rem;">
 
-                <div class="android"> <img src="images/android.jpg" alt="android"> </div> 
+                <div class="android"> <i class="fa fa-android"></i> </div> 
                 <div class="download-app"> Download App </div>
 
             </button>
@@ -91,7 +92,7 @@
                     <center>
                     <form>
 
-                        <h2 style="font-size: 3rem; margin-top: 0.9rem; margin-bottom: 0.9rem;">Sign-Up</h2>
+                        <h2 style="font-size: 3rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">Sign-Up</h2>
 
                         <div class="input-icons">                            
                             <input class="input-field" id="fullname"
@@ -120,7 +121,12 @@
                                 type="password"
                                 placeholder="Re-Password">
                         </div>
-
+                        
+                        <div class="Proceed">
+                            <button>
+                                Proceed
+                            </button>
+                        </div>
 
                     </form>
                 </center>
@@ -131,7 +137,7 @@
                 <div class="theme">
                     <p>Because We Care !</p> 
                 </div>
-            </div><br>
+            </div>
               
             <!-- Other options -->
             <div class="options">
