@@ -5,32 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Links Of Google fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Kadwa&family=Poppins:wght@300&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Link of css file -->
+    <!-- Link of fontawesome that contain edit icon -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="style.css" />
 
     <title>AMBU Profile Section</title>
   </head>
   <body>
-
     <div class="container">
-
-      <!-- Side Text Which Contain The project main quote "Connect to Care" -->
+      <!-- Side Text -->
 
       <div class="side-text">
         <h3>Connect to Care</h3>
       </div>
 
-      <!-- Profile Banner (LEFT) which contain user profile and main logo -->
+      <!-- Profile Banner (LEFT) that contains profile, logo of company and the help section -->
 
       <div class="info">
         <div class="logo">
@@ -48,7 +53,7 @@
           <p>Recent Activity</p>
         </div>
 
-        <!-- Help Section -->
+        <!-- help section -->
 
         <div class="help">
           <h3>Need Help!</h3>
@@ -57,28 +62,46 @@
         </div>
       </div>
 
-      <!-- Main Profile Entries(RIGHT) which contain Brief about user and its main details -->
+      <!-- Main Profile Entries(RIGHT) that contain the all basic detail about the user -->
 
       <div class="profile">
         <div class="right-header">
           <div class="closure">Good Morning</div>
 
           <div class="right-icons">
-            <abbr title="Translate">
-              <a href="#"><img src="image/translate.png" alt="" /></a>
-            </abbr>
+            <div class="notificaion-img">
+              <abbr title="notifications">
+                <a href="#">
+                  <img src="image/notification.png" alt="" />
+                </a>
+              </abbr>
+            </div>
 
-            <abbr title="Notifications">
-              <a href="#"><img src="image/notification.png" alt="" /></a>
-            </abbr>
+            <div class="languages">
+              <form action="/action_page.php">
+                <select name="language" class="language">
+                  <option value="English">English</option>
+                  <option value="Hindi">Hindi</option>
+                  <option value="Tamil">Tamil</option>
+                  <option value="Others">Others</option>
+                </select>
+              </form>
+            </div>
 
-            <abbr title="Profile">
-              <a href="#"><img src="image/profile.png" alt="" class="profile-img-icon" /></a>
-            </abbr>
+            <div class="user-profile">
+              <abbr title="Profile">
+                <a href="#">
+                  <i
+                    class="fa-solid fa-user fa-2xl"
+                    style="color: #000000;"
+                  ></i>
+                </a>
+              </abbr>
+            </div>
           </div>
         </div>
 
-        <!-- Buttons for different sections of user detail-->
+        <!-- Buttons for different section -->
 
         <div class="tags">
           <div class="tags1">
@@ -94,7 +117,7 @@
           </div>
         </div>
 
-        <!-- Main Profile Entries Section where user can fill their basic details-->
+        <!-- Main Profile Entries Section -->
 
         <div class="main-profile">
           <abbr title="Profile Image">
@@ -102,8 +125,7 @@
           </abbr>
 
           <a href="#">
-
-            <!-- Edit Section for edit some changes-->
+            <!-- Edit Section -->
 
             <abbr title="Edit Data"><p class="edit">Edit Profile</p></abbr>
           </a>
@@ -113,8 +135,8 @@
           <div class="main-info">
             <form action="/action_page.php">
 
-              <!-- Name Section -->
-
+              <!-- Name section -->
+              
               <div class="first-row">
                 <div class="first-row-input">
                   <label for="User-name">First name</label>
@@ -127,7 +149,7 @@
                 </div>
               </div>
 
-              <!-- Date Of Birth section -->
+              <!-- Father User date of birth section -->
 
               <div class="second-row">
                 <div class="second-row-input">
@@ -145,7 +167,7 @@
                 </div>
               </div>
 
-              <!-- Father Name Section -->
+              <!-- father name sction -->
 
               <div class="third-row">
                 <div class="third-row-input">
@@ -163,7 +185,7 @@
                 </div>
               </div>
 
-              <!-- Mother Name Section -->
+              <!-- Mother name section -->
 
               <div class="fourth-row">
                 <div class="fourth-row-input">
@@ -181,7 +203,7 @@
                 </div>
               </div>
 
-              <!-- User Address -->
+              <!-- User address -->
 
               <div class="fifth-row">
                 <div class="fifth-row-input">
@@ -195,7 +217,7 @@
                 </div>
               </div>
 
-              <!-- User Email ID -->
+              <!-- User email id -->
 
               <div class="sixth-row">
                 <div class="sixth-row-input">
@@ -213,8 +235,6 @@
         </div>
       </div>
     </div>
-
-    <!-- JavaScrit Code Goes Here -->
 
     <script src="script.js"></script>
   </body>

@@ -148,7 +148,7 @@
     margin: 20px;
   }
   
-  /* Icons */
+  /* Icons that contains notifiction icon and user profile image */
   
   .right-icons {
     display: flex;
@@ -159,6 +159,31 @@
     scale: 1.3;
     transition: 0.5s;
   }
+
+  .notificaion-img a img {
+    width: 25px;
+    height: 25px;
+    margin-top: 14px;
+  }
+  
+  .languages form select {
+    margin: 13px 20px;
+    width: 140px;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 4px;
+  }
+  
+  .user-profile {
+    margin: 8px 5px 0px 5px;
+  }
+
+  .user-profile i:hover {
+    scale: 1.1;
+    transition: 0.5s;
+  }
+
+  /* Main User Data entries starts from */
 
   .profile .profile-img-icon {
     margin: -14px 10px;
