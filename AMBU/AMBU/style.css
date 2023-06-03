@@ -1,41 +1,60 @@
 * {
-margin:0;
-padding:0;
-box-sizing: border-box;
-font-family: 'jaldi';
-font-weight: 400;
-text-decoration: none;
-text-align: center;
+    font-weight: 400;
+    text-decoration: none;
+    }
+    
+
+/* Setting default font to website */
+body {
+ 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'jaldi', Calibri, serif;
+    margin: 0px;
+    
 }
 
-body{
-    overflow-x: hidden;
-    max-width: 100%;
-    position: absolute;
-    min-height: 200vh;
 
-}
-                                                        /* navbar css stars */
-nav{
-    height: 14vh;
-    position: fixed;
-    top:0%;
-    left:0%;
-    width:100%;
-    align-items: center;
-    transition: 0.6s;
-    background-color:rgb(252, 249, 249);
+/* Navbar css start */
+/* #navbar {
     display: flex;
     justify-content: space-between;
+    transition: 0.3s;
     align-items: center;
-   z-index: 9999;
-    padding: 15px 50px;
-    color:  #191e24f5;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 4.5rem;
+    background-color:#fff;
+
+    margin: 1%;
+    cursor: pointer;
+    z-index: 9999;
+
+} */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 4.5rem;
+    background-color: #fff;
+    margin: 1%;
+    cursor: pointer;
+    z-index: 9999;
 }
-.sticky{
-    padding: 5px 100px;
-    background: #fff;
+.img1{
+    height: 4.75rem;
+    margin-left: 4px;
+    transition: 0.3s;
+
 }
+
+
 nav ul {
     position: relative;
     list-style-type: none;
@@ -45,11 +64,9 @@ nav ul {
     justify-content: center;
 }
 
-li{
-    width:70px;
-}
 
-li a {
+
+nav ul  {
     position: relative;
     margin: 0 15px;
     letter-spacing: 2px;
@@ -61,7 +78,7 @@ li a {
     color:  #010a15f5;
 }
 
-li a:hover {
+nav ul  a:hover {
     color: #e21919;
     border-bottom:4px #020e68 solid;
     transition: 0.5s;
@@ -75,150 +92,223 @@ li a:hover {
 
                                                             /* navbar css ends */
 
-@media screen and (max-width:700px) {
-    .nav{
-        display: flex;
-        flex-direction: column;
-        gap:8px;
-        cursor: pointer;
-        padding: 10px;
-        margin-right: -10px;
-    }
-    .lines {
-        display: block;
-        background-color: white;
-        height: 2px;
-        width: 35px;
-    }
-    .lines-rotate {
-        background-color: rgb(85);
-        border-radius: 5px;
-    }
-    nav {
-        position: relative;
-        padding: 15px 20px;
-    }
-}
-
-.dropdown * {
-    box-sizing: border-box;
-}
-.select{
-    background: #02277d;
-    color: #fff;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    border:2px #2a2f3b solid;
-    border-radius: 0.5em;
-    padding: 1em;
-    cursor:pointer;
-    transition: background 0.3s;
-}
-.select:hover {
-    background: #0239a6;
-}
-
-
-                                                            /* "|" gap box between sign and login css  */
-.content{
+                                                 
+.dropdown .dropbtn {
+    font-size: 1.1rem;
+    border: groove;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 6px; 
+    border-radius: 15px;
+     }
+                                                              
+                                                            
+.navbar a:hover, .dropdown:hover .dropbtn {
+background-color: rgb(253, 251, 251);
+ }
+.dropdown-content {
+display: none;
 position: absolute;
-width: 45px;
-height: 0px;
-left: 1141px;
-top: 710px;
-
-border: 3px solid #000000;
-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-transform: rotate(90deg);
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
 }
-                                                /* "|" gap box between sign and login css ends */
-
-                                                /* Unified healthcare css starts */
-.text{
-    position: absolute;
-            width: 584px;
-            height: 119px;
-            left: -8px;
-            top: 498px;
-            
-            font-family: 'Kadwa';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 40px;
-            line-height: 60px;
-            
-            
-            display: flex;
-            align-items: center;
-            letter-spacing: -0.017em;
-            
-            color: #FDF9EE;;
-            
-            text-shadow:  7px 4px 4px rgba(0, 0, 0, 0.5);
+                                                              
+                                                              
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
 }
-                                                        /* Unified healthcare css ends */
-
-                                                    
-                                                            /* AMBU word css  */
-.centered{
-    position: absolute;
-            width: 496px;
-            height: 130px;
-            left: 50px;
-            top: 327px;
-            
-            font-family: 'Kadwa';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 134px;
-            line-height: 32px;
-            
-            
-            display: flex;
-            align-items: center;
-            letter-spacing: -0.017em;
-            
-            color: #FFFEFE;
-            
-            text-shadow: 8px 4px 4px rgba(236, 0, 0, 0.25);
+                                                                     
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+                                                              
+.dropdown:hover .dropdown-content {
+display: block;
+}     
+                                                               /* dropdown button ends */    
+.pic {
+height: 1.75rem;
+border-radius: 1.25rem;
+border-width: 0.125rem;
+border-style: solid;   
 }
 
-                                                                /* AMBU word css ends */
 
+#content {
+    display: flex;
+    margin-top: 4.5rem;
+    transition: 0.3s;
+    justify-content: space-between;
+    background-image: url(stethoscope-4280497_1920.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 851px;
+    border-radius: 1.5%;
+}
+/* AMBU style */
 
-                                                            /* emergency css starts */
-.emergency{
-    position: absolute;
-       width: 377px;
-       height: 70px;
-       left: 960px;
-       top: 172px;
-       
-       font-family: 'Kadwa';
-       font-style: normal;
-       font-weight: 700;
-       font-size: 64px;
-       line-height: 32px;
+.body-left h1 {
+    font-size: 7rem;
+    color: #f8eeee;
+    line-height: 5rem;
+    text-shadow: -2px 2px 2px black;
+}
+
+/* Tagline */
+
+.body-left p {
+    font-size: 2.5rem;
+    color: #f8eeee;
+    line-height: 3rem;
+    text-shadow: -2px 2px 2px black
+
+}
+.body-left {
+    width: 100%;
+    margin: 2.5rem;
+    margin-top: 3rem;
+}
+                                                               /* Download button css starts */
+.btn1{
+    position: absolute;  
+    font-family: 'Kadwa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 64px;
+
+    color: #E85A4F;
+
+    width: 401px;
+    height: 74px;
+    left: 97px;
+    top: 610px;
     
-       
-       display: flex;
-       align-items: center;
-       letter-spacing: -0.017em;
-       
-       color: #000000;
-       
-       text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-                                                                    /* emergency css ends */
+    background: #FFFFFF;
+    border-radius: 35px;
 
-                                                            /* call us css stats */
+}
+.btn1:active {
+    outline:5px solid rgba(85,92,99,0.445)
+}
+.btn1:hover{
+    background-color: #cdf7b3;
+
+}
+.img2 {
+    width: 2.3rem;
+}
+                                                                                /* Download button css ends */
+
+#about{
+    display: flex;
+}
+.right{                                                             
+position: absolute;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-content: center;
+height: 851px;
+right: -776px;
+top: 82px;
+
+background: rgba(101, 227, 215, 0.8);
+box-shadow: 20px 4px 4px rgba(30, 249, 249, 0.25);
+}  
+
+@media only screen and (max-width: 600px) {
+    #header {
+        display: block;
+    }
+    #about {
+        display: block;
+      }
+    #content{
+        display: block;
+    }
+      }
+
+
+                                                        /* login css starts  */
+.block{
+    position: absolute;
+    width: 272px;
+    height: 82px;
+    left: 1270px;
+    top: 611px;
+    
+    font-family: 'Kadwa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 32px;
+    
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.017em;
+    
+    color: #000000;
+    
+    mix-blend-mode: normal;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.block a:hover {
+    color: #e21919;
+    border-bottom:4px #020e68 solid;
+    transition: 0.5s;
+}
+                                                                /* login css ends */
+
+                                                                  /* sign up css starts */
+.sign{
+    position: absolute;
+    width: 205px;
+    height: 67px;
+    left: 900px;
+    top: 623px;
+    
+    font-family: 'Kadwa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 32px;
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.017em;
+    
+    font: #000000;
+    
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+.sign a:hover {
+    color: #e21919;
+    border-bottom:4px #020e68 solid;
+    transition: 0.5s;
+}
+                                                                /* sign up css ends */
+
+                                                                  /* call us css stats */
 .call{
     position: absolute;
     width: 205px;
     height: 67px;
     left: 1065px;
-    top: 594px;
+    top: 523px;
     
     font-family: 'Kadwa';
     font-style: normal;
@@ -237,63 +327,80 @@ transform: rotate(90deg);
 }
                                                                 /* call us csss ends */
 
-                                                            /* sign up css starts */
-.sign{
+                                                                /* emergency css starts */
+  .emergency{
     position: absolute;
-    width: 205px;
-    height: 67px;
-    left: 900px;
-    top: 685px;
+       width: 377px;
+       height: 70px;
+       left: 960px;
+       top: 110px;
+       
+       font-family: 'Kadwa';
+       font-style: normal;
+       font-weight: 700;
+       font-size: 64px;
+       line-height: 32px;
     
-    font-family: 'Kadwa';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 32px;
-    
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.017em;
-    
-    color: #000000;
-    
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+       
+       display: flex;
+       align-items: center;
+       letter-spacing: -0.017em;
+       
+       color: #000000;
+       
+       text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
-                                                                /* sign up css ends */
+                                                                    /* emergency css ends */
 
-                                                        /* login css starts  */
-.block{
+                                                                      /* "|" gap box between sign and login css  */
+.content{
     position: absolute;
-    width: 272px;
-    height: 82px;
-    left: 1270px;
-    top: 673px;
+    width: 45px;
+    height: 0px;
+    left: 1141px;
+    top: 657px;
     
-    font-family: 'Kadwa';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 32px;
-    
-    
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(90deg);
+    }
+                                                    /* "|" gap box between sign and login css ends */
+
+ .img3{
     display: flex;
-    align-items: center;
-    letter-spacing: -0.017em;
-    
-    color: #000000;
-    
-    mix-blend-mode: normal;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-                                                                /* login css ends */
-
-                                                                /* about css starts */
-.about{
     position: absolute;
+      width: 318px;
+      height: 288px;
+      left: 982px;
+      top: 204px;
+      border-radius: 60%;
+      background: #F0E7E7;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      
+        float: top;
+        border: 1px solid green;
+    
+}
+.img5 {
+    display:flex; 
+     flex-direction: row;
+    position: absolute;
+    width: 140px;
+    height: 81px;
+    left: 1359px;
+    top: 672px;justify-content: end;
+    align-items: center; 
+    margin-right: 0.5rem;
+    
+  }
+
+                                                                    /* sidebar css starts */
+.side{
+    position: fixed;
     width: 456px;
     height: 70px;
     left: 1243px;
-    top: 305px;
+    top: 283px;
     
     font-family: 'Kadwa';
     font-style: normal;
@@ -313,121 +420,4 @@ transform: rotate(90deg);
 background: #20B038;
 border-radius: 20px 10px 0px 20px;
 }    
-                                                                    /* about css ends */
-
-  
-                                                                     /* Dropdown button starts */
-  .dropdown .dropbtn {
-    font-size: 1.1rem;
-    border: groove;
-    color: black;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 6px; 
-    border-radius: 15px;
-  }
-  
-
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(253, 251, 251);
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-                                                                                /* dropdown button ends */
-
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-                                                                /* Download button css starts */
-.btn1{
-    position: absolute;  
-    font-family: 'Kadwa';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 64px;
-
-    color: #E85A4F;
-
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 401px;
-    height: 74px;
-    left: 97px;
-    top: 662px;
-    
-    background: #FFFFFF;
-    border-radius: 35px;
-
-}
-.btn1:active {
-    outline:5px solid rgba(85,92,99,0.445)
-}
-.btn1:hover{
-    background-color: #fff9a0;
-}
-                                                                                /* Download button css ends */
-
-.img2{
-    position: absolute;
-    left: 5.25%;
-    right: 87.57%;
-    bottom: 6.91%;
-}
-
-.img3{
-    position: absolute;
-      width: 318px;
-      height: 288px;
-      left: 982px;
-      top: 271px;
-      border-radius: 60%;
-      background: #F0E7E7;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      
-}
-.img4{
-    position: absolute;
-        width: 740px;
-        height: 847px;
-        right: 0px;
-        top: 104px;
-        background: rgba(101, 227, 215, 0.8);
-        box-shadow: 20px 4px 4px rgba(30, 249, 249, 0.25)
-}
-.img1{
-    position: absolute;
-    left: 96.03%;
-    right: 1.72%;
-    top: 9.09%;
-    bottom: 91.34%;
-}
-
-.img5 {
-    position: absolute;
-    width: 140px;
-    height: 109px;
-    left: 1382px;
-    top: 844px
-  }
+                                                                    /* sidebar css ends */
