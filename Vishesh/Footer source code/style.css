@@ -1,0 +1,210 @@
+
+/* Setting default font to website */
+
+body {
+    font-family: 'Kadwa', Calibri, serif;
+    margin: 0px;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    display: block;
+    background-color: white;
+    /* background-image: url(images/beautiful-view-greenery-bridge-forest-perfect-background_181624-17827.avif);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover; */
+    
+
+    
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+abbr{
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+        
+        
+        
+        
+        
+
+
+/* Footer style */
+.footer{
+    background-image: linear-gradient(#0f2831, #37414c, #5361a6);
+    color: white;
+    margin-bottom: -15px;
+    
+}
+
+
+    h2{
+        font-size: 2vw;
+    }
+
+    ul {
+        font-size: 1.5vw;
+    }
+
+    .footer-options {
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 0;
+        
+    }
+
+    .footer-options div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .apk{
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-contact {
+        width: 3.5vw; 
+        margin-left: 2rem;
+    }
+
+    @media (max-width:650px) {
+        .social-contact {
+            width: 3.5vh; 
+            margin-left: 2rem;
+        }
+    }
+
+
+    .know-us h1, ul{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* download button style */
+        .apk button{
+            display: flex;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        button span {
+            font-size: 1.4vh;
+            font-weight: bold;
+        }
+
+    /* making links white */
+        .know-us a{
+            color: white;
+        }
+        
+        .services a{
+            color: white;
+        }
+
+        .contact-us a{
+            color: white;
+        }
+
+
+    figure { 
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    /* adding hover and animations in footer */
+        .footer a:hover {
+            font-size: 125%;
+        }
+
+        a{
+            display: inline-block;
+            position: relative;
+            color: #3d4347;
+        }
+        
+        .footer a:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #535759;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .footer a:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Box animation that is used in social media icons */
+        .box{
+            transition: 0.7s;
+        
+            }
+        .box:hover{
+            transform: scale(1.05);
+            z-index: 2;
+            box-shadow: 2px 2px 2px #000;
+            
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
