@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@700&family=Kadwa:wght@700&display=swap');
+
+body {
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.625em;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    display: block;
+    background-color:#F8F2F2;;
+} 
+                                                                        /* FOOTER CSS */
+.footer{
+    position:absolute;
+    justify-content: space-evenly;
+    top:70rem;
+    background-image: linear-gradient(#0f2831, #37414c, #5361a6);
+    color: white;
+    padding-right: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+abbr{
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+  }
+
+li{
+    list-style: none;
+}
+    h2{
+        font-size: 2vw;
+    }
+
+    ul {
+        font-size: 1.5vw;
+    }
+
+    .footer-options {
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 0;
+        
+    }
+
+    .footer-options div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        
+    }
+
+    .apk{
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-contact {
+        width: 3.5vw; 
+        margin-left: 2rem;
+    }
+
+    @media (max-width:650px) {
+        .social-contact {
+            width: 3.5vh; 
+            margin-left: 2rem;
+        }
+    }
+
+
+    .know-us h1, ul{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* download button style */
+        .apk button{
+            display: flex;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        button span {
+            font-size: 1.4vh;
+            font-weight: bold;
+        }
+
+    /* making links white */
+        .know-us a{
+            color: white;
+        
+        }
+        
+        .services a{
+            color: white;
+        }
+
+        .contact-us a{
+            color: white;
+        }
+
+
+    figure { 
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    /* adding hover and animations in footer */
+        .footer a:hover {
+            font-size: 125%;
+        }
+
+        a{
+            display: inline-block;
+            position: relative;
+            color: #3d4347;
+        }
+        
+        .footer a:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #535759;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .footer a:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Box animation that is used in social media icons */
+        .box{
+            transition: 0.7s;
+        
+            }
+        .box:hover{
+            transform: scale(1.05);
+            z-index: 2;
+            box-shadow: 2px 2px 2px #000;
+            
+        }
+
+
+                                                                      /* Navigation bar */
+#header {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s;
+    align-items: center;
+    position: fixed;
+    right:0;
+    top: 0;
+    height: 4.5rem;
+    background-color:#fff;
+    box-shadow: 4px 2px 8px ;
+    z-index: 10;
+    width: 100%;
+    
+}
+
+#left-header {
+    height: inherit;
+}
+
+ /* AMBU logo */
+#left-header img {
+    height: 4.75rem;
+    margin-left: 4px;
+    transition: 0.3s;
+}
+
+/* Right Section of navbar*/
+.right-header{
+   
+    justify-content: space-evenly;  
+    display: flex;      
+}
+
+/* Navbar Options */
+.right-header-element {
+    margin-right: 2rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: 'Jaldi',sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;            
+}
+.profile:hover{
+  scale: 2.0;
+}
+
+/* Language */
+.right-header-element select {
+    border-radius: 0.5rem;
+    padding: 3px 9px 3px 9px;
+    box-shadow: 2px 2px 1px black;
+    border: none;
+    background-color: lightgrey;
+    text-shadow: inherit;
+    cursor: pointer;
+}
+
+.right-header-element abbr {
+    text-decoration: none;
+}
+.right-header-element abbr:hover{
+    background-color: #cecece;
+    padding: .4rem;
+}
+                                                                    /* BOOKING details BOX CSS */
+#box{
+display: flex;
+position: absolute;
+width: 1310px;
+height: 108px;
+left: 80px;
+top: 146px;
+align-content: center;   
+background: #15538D;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 28px;
+}
+.boxtop{
+    display:block;
+}
+
+    
+  
+
+.head-h3 {
+display: flex;
+position: absolute;
+width: 351px;
+height: 26px;
+left: 753px;
+top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+color: #fff;
+}
+.head-h1{
+display: flex;
+position: absolute;
+width: 304px;
+height: 26px;
+left: 104px;
+top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #fff;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.head-h2{
+display: flex;
+position: absolute;
+width: 229px;
+height: 19px;
+left: 468px;
+top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+color: #fff;
+}
+.head-h4{
+display: flex;
+position: absolute;
+width: 425px;
+height: 26px;
+left: 1027px;
+top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+color: #fff;
+
+}
+
+.head-p1{
+position: absolute;
+width: 30px;
+height: 30px;
+left: 146px;
+top: 49px;
+background: #000000;
+border-radius: 20px;
+}
+.head-p2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 504px;
+    top: 49px;
+    background:#D9D9D9;
+    border-radius: 20px; 
+}
+.head-p3{  
+position: absolute;
+width: 30px;
+height: 30px;
+left: 811px;
+top: 49px;
+background: #D9D9D9;
+border-radius: 20px;    
+}
+.head-p4{
+position: absolute;
+width: 30px;
+height: 30px;
+left: 1120px;
+top: 49px;
+background: #D9D9D9;
+border-radius: 20px;
+}
+
+.line-1{
+    position: absolute;
+width: 264.32px;
+height: 0px;
+left: 216.16px;
+top: 66.5px;
+border: 2px solid #FFFFFF;
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+transform: rotate(180deg);
+}
+.line-2{
+    position: absolute;
+    width: 264.32px;
+    height: 0px;
+    left: 538.16px;
+    top: 66.5px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(180deg); 
+}
+.line-3{
+    position: absolute;
+    width: 264.32px;
+    height: 0px;
+    left: 846.16px;
+    top: 66.5px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(180deg);
+}
+
+
+
+                                                                    /* Left side ambulancs card css */
+.card{
+    box-sizing: border-box;
+    position: absolute;
+    width: 571px;
+    height: 588px;
+    left: 9rem;
+    top: 20rem;
+    color: white;
+    background: #15538D;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    
+}
+.h5{
+    margin-left: 23px;
+    font-size: 20px;
+}
+.ul{
+    list-style: none;
+}
+.text-1{
+    position: absolute;
+    top: 358px;
+    padding-left: 176px;
+}
+.text-2{
+    position: absolute;
+    top: 438px;
+    padding-left: 176px;
+}
+.text-3{
+    position: absolute;
+    top: 518px;
+    padding-left: 176px;
+}
+.img-1{
+    margin-left:12px;
+    margin-bottom: 22px;
+}
+.img-2{
+    margin-left:12px;
+    margin-bottom: 22px;
+}
+.img-3{
+    margin-left:12px;
+    margin-bottom: 22px;
+}
+.img-0{
+    margin-left: 97px;
+}
+.img-0:hover{
+    scale:1.1;
+}
+
+
+                                                        /* contact form css */
+.contactform{
+    padding: 0 34px;
+    padding-top: 144px; 
+    font-family:'Fira Sans', sans-serif ;
+    margin-left: -186px;
+  }
+  
+  .contactform div{
+    width: 5vw;
+    border-radius: 5px;
+    margin: 6px 0;
+    padding: 3px;
+  }
+  
+  .mb-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    width: 15vw;
+    height: 6vh;
+    border-radius: 5px;
+    margin: 6px 0 0 0;
+    padding: 3px;
+  }
+  
+  div.main{
+    margin: 30px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 641px;
+    height: 60px;
+    left: 925px;
+    top: 477px;
+  }
+  div#emailHelp {
+    font-size: 12px;
+    color: midnightblue;
+    margin: 0 5px;
+    padding: 3px 0 0 0;
+  }
+  
+  #form-check{
+    flex-direction: row;
+  }
+  
+  #form-check input{
+    width: 24px;
+    margin: 3px 0;
+  }
+
+.main h3
+{
+    position: absolute;
+    width: 674px;
+    /* height: 56px; */
+    left:-223px;
+    top: -178px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #15538D;
+}
+
+
+div.container.mt-2{
+    padding: 38px;
+    margin-bottom: -18px;
+    border-radius: 12px;
+}
+.verify{
+    
+   
+    position: absolute;
+    top: 62rem;
+    left: 64rem;
+    width: 100%;
+   
+
+    
+   
+    
+    
+    
+
+}
+
+.nmb{
+    position: absolute;
+    top: 66rem;
+    left: 64rem;
+    width: 100%;
+    
+    
+    
+    
+    
+}
+.btn1{
+    background-color:  #15538D;
+    border: none;
+    color: white;
+    padding:14px 56px ; 
+    margin-left: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 59rem;
+    left: 60rem;
+    border-radius: 12px;
+    
+}
+.btn2{
+    position: absolute;
+    background-color:  #15538D;
+    border: none;
+    color: white;
+    padding:14px 56px;
+    margin-left: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    top: 54rem;
+    left: 60rem;
+    border-radius: 12px;
+}
+.div#livealertplaceholder{
+    position: absolute;
+    top: 144%;
+    left: 65%;
+}
+h5.OTP{
+    margin-left: -72px;
+    font-size: 1rem;
+}
