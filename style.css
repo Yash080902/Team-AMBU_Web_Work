@@ -2,13 +2,165 @@
 
 body {
     margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.625em;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    display: block;
+    background-color:#F8F2F2;;
+} 
+                                                                        /* FOOTER CSS */
+.footer{
+    position:absolute;
+    justify-content: space-evenly;
+    top:70rem;
+    background-image: linear-gradient(#0f2831, #37414c, #5361a6);
+    color: white;
+    padding-right: 0px;
     width: 100%;
-    
-    
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 
-/* Navigation bar */
+abbr{
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+  }
 
+li{
+    list-style: none;
+}
+    h2{
+        font-size: 2vw;
+    }
+
+    ul {
+        font-size: 1.5vw;
+    }
+
+    .footer-options {
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 0;
+        
+    }
+
+    .footer-options div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        
+    }
+
+    .apk{
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-contact {
+        width: 3.5vw; 
+        margin-left: 2rem;
+    }
+
+    @media (max-width:650px) {
+        .social-contact {
+            width: 3.5vh; 
+            margin-left: 2rem;
+        }
+    }
+
+
+    .know-us h1, ul{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* download button style */
+        .apk button{
+            display: flex;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        button span {
+            font-size: 1.4vh;
+            font-weight: bold;
+        }
+
+    /* making links white */
+        .know-us a{
+            color: white;
+        
+        }
+        
+        .services a{
+            color: white;
+        }
+
+        .contact-us a{
+            color: white;
+        }
+
+
+    figure { 
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    /* adding hover and animations in footer */
+        .footer a:hover {
+            font-size: 125%;
+        }
+
+        a{
+            display: inline-block;
+            position: relative;
+            color: #3d4347;
+        }
+        
+        .footer a:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #535759;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .footer a:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Box animation that is used in social media icons */
+        .box{
+            transition: 0.7s;
+        
+            }
+        .box:hover{
+            transform: scale(1.05);
+            z-index: 2;
+            box-shadow: 2px 2px 2px #000;
+            
+        }
+
+
+                                                                      /* Navigation bar */
 #header {
     display: flex;
     justify-content: space-between;
@@ -22,11 +174,8 @@ body {
     box-shadow: 4px 2px 8px ;
     z-index: 10;
     width: 100%;
-     
-   
-
+    
 }
-
 
 #left-header {
     height: inherit;
@@ -80,192 +229,362 @@ body {
     background-color: #cecece;
     padding: .4rem;
 }
-
+                                                                    /* BOOKING details BOX CSS */
+#box{
+display: flex;
+position: absolute;
+width: 1310px;
+height: 108px;
+left: 80px;
+top: 146px;
+align-content: center;   
+background: #15538D;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 28px;
+}
+.boxtop{
+    display:block;
+}
 
     
- /* Header Section */
-#content {
-    display: flex;
-    margin-top: 4.5rem;
-    transition: 0.5s;
-    justify-content: space-between;
-    height: 100vh;
-    width: 100%;
-    background-image: url(images/img3.jpg);
-    background-size: cover;
-    right: 0;
+  
+
+.head-h3 {
+display: flex;
+position: absolute;
+width: 351px;
+height: 26px;
+left: 753px;
+top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+color: #fff;
+}
+.head-h1{
+display: flex;
+position: absolute;
+width: 304px;
+height: 26px;
+left: 104px;
+top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #fff;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.head-h2{
+display: flex;
+position: absolute;
+width: 229px;
+height: 19px;
+left: 468px;
+top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+color: #fff;
+}
+.head-h4{
+display: flex;
+position: absolute;
+width: 425px;
+height: 26px;
+left: 1027px;
+top: 14px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+color: #fff;
+
+}
+
+.head-p1{
+position: absolute;
+width: 30px;
+height: 30px;
+left: 146px;
+top: 49px;
+background: #000000;
+border-radius: 20px;
+}
+.head-p2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 504px;
+    top: 49px;
+    background:#D9D9D9;
+    border-radius: 20px; 
+}
+.head-p3{  
+position: absolute;
+width: 30px;
+height: 30px;
+left: 811px;
+top: 49px;
+background: #D9D9D9;
+border-radius: 20px;    
+}
+.head-p4{
+position: absolute;
+width: 30px;
+height: 30px;
+left: 1120px;
+top: 49px;
+background: #D9D9D9;
+border-radius: 20px;
+}
+
+.line-1{
+    position: absolute;
+width: 264.32px;
+height: 0px;
+left: 216.16px;
+top: 66.5px;
+border: 2px solid #FFFFFF;
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+transform: rotate(180deg);
+}
+.line-2{
+    position: absolute;
+    width: 264.32px;
+    height: 0px;
+    left: 538.16px;
+    top: 66.5px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(180deg); 
+}
+.line-3{
+    position: absolute;
+    width: 264.32px;
+    height: 0px;
+    left: 846.16px;
+    top: 66.5px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(180deg);
+}
+
+
+
+                                                                    /* Left side ambulancs card css */
+.card{
+    box-sizing: border-box;
+    position: absolute;
+    width: 571px;
+    height: 588px;
+    left: 9rem;
+    top: 20rem;
+    color: white;
+    background: #15538D;
+    border: 1px solid #000000;
+    border-radius: 25px;
     
-   
-
+}
+.h5{
+    margin-left: 23px;
+    font-size: 20px;
+}
+.ul{
+    list-style: none;
+}
+.text-1{
+    position: absolute;
+    top: 358px;
+    padding-left: 176px;
+}
+.text-2{
+    position: absolute;
+    top: 438px;
+    padding-left: 176px;
+}
+.text-3{
+    position: absolute;
+    top: 518px;
+    padding-left: 176px;
+}
+.img-1{
+    margin-left:12px;
+    margin-bottom: 22px;
+}
+.img-2{
+    margin-left:12px;
+    margin-bottom: 22px;
+}
+.img-3{
+    margin-left:12px;
+    margin-bottom: 22px;
+}
+.img-0{
+    margin-left: 97px;
+}
+.img-0:hover{
+    scale:1.1;
 }
 
-/* Header Section Left Part */
-.hoeff:hover{
-    
-    cursor: pointer;
-}
-.leftp {
-    width: 100%;
-    margin: 2rem;
-    margin-top: 3rem;
-}
 
-/* AMBU */
-.leftp h1 {      
-    font-weight: bolder;
-    
-    color: #f8eeee;
-    text-shadow: 2px 2px 2px rgb(207, 45, 45);  
-    font-size: 7rem;
-    line-height: 5rem;
-      
-}
-
-/* Unified health care... */
-.leftp p {
-    font-size: 2.5rem;
-    color: #f8eeee;
-    line-height: 3rem;
-    text-shadow: -2px 2px 2px black
-}
-
-/* Download button */
-
-
-.leftp button {
-    font-size: 2.3rem;
-    margin-left: 1rem;
-    padding: 10px;
-    border-radius: 2rem;
-    margin-top: 4vh;
-} 
-
-.leftp button .download-app {
-    font-size: 2.3rem;
-    color: #e85a4f;
-    text-shadow: 2px 2px 2px black;                
-}
-.android img {
-    width: 2.3rem;
-}
-
-/* Header Section right part  */
-/* Emergency text  */
-
-
-
-
-
-.rightp {
-    background-color: rgb(100, 227, 214, 0.8);
-    width: 100%;
+                                                        /* contact form css */
+.contactform{
+    padding: 0 34px;
+    padding-top: 144px; 
+    font-family:'Fira Sans', sans-serif ;
+    margin-left: -186px;
+  }
+  
+  .contactform div{
+    width: 5vw;
+    border-radius: 5px;
+    margin: 6px 0;
+    padding: 3px;
+  }
+  
+  .mb-3 {
     display: flex;
     flex-direction: column;
-    align-content: center;        
-}
-  /* Calling button  */
-  .callbtn{
-    margin-top: 5rem ;
-    color: #cfbbbb;
-    border: none;
-    height: 15rem;
-    width:  15rem;
-    border-radius: 50rem;
-   
-    
-     margin-left: -4rem;
-     padding: 2px;
-}  
-.img4{
-    margin-top: 1rem ;
-    height: 10rem;
-     max-width:  10rem;
-    border: none;
-    margin-left: 0.5rem; 
-   
-      } 
+    padding: 10px 0;
+    width: 15vw;
+    height: 6vh;
+    border-radius: 5px;
+    margin: 6px 0 0 0;
+    padding: 3px;
+  }
+  
+  div.main{
+    margin: 30px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 641px;
+    height: 60px;
+    left: 925px;
+    top: 477px;
+  }
+  div#emailHelp {
+    font-size: 12px;
+    color: midnightblue;
+    margin: 0 5px;
+    padding: 3px 0 0 0;
+  }
+  
+  #form-check{
+    flex-direction: row;
+  }
+  
+  #form-check input{
+    width: 24px;
+    margin: 3px 0;
+  }
 
-   .cal{
-    margin-top: 5rem ;
-    color: #F0E7E7;
-    border: none;
-    height: 10rem;
-    width:  10rem;
-    border-radius: 50%;
-   
-     margin-left: 10rem;
-}   
-.call{
-   
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    font-family: 'Kadwa',serif;
-    font-size: 3rem;
-    margin-left: -4rem;
-    font-weight: bold;
- }
-
-/* Your health is your priority */
-.slogan {
-    background-color: #fff;
-    position: fixed;
-    
-    right:0;
-    width: 4rem;
-    margin-top: -24.5rem;
-    border-radius: 1rem 0rem 0rem 1rem;
-    background-color:#20b038;            
-}
-.slogan p {
-    writing-mode: vertical-rl;
-    margin: 70% 0% 70% 0%;
-    rotate: 180deg;
+.main h3
+{
+    position: absolute;
+    width: 674px;
+    /* height: 56px; */
+    left:-223px;
+    top: -178px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
     text-align: center;
-    padding: 2px 0px 2px 0px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.8rem; 
-    font-family: 'Kadwa',serif;               
-}
-       
-/* Sign up and login buttons */
-.btn{
-    margin-top: 1rem;
-    
-    
-    display: flex;
-    justify-content: space-evenly;
-    font-family: 'Kadwa',serif;
-    font-size: 2rem;
-    margin-left: -1rem;
-    font-weight: bold;
+    color: #15538D;
 }
 
- /* Chatbox image */
-.chatbox img {
-    margin-top: 15rem;
-    width: 4.3rem;
-    margin-right: 0.5rem;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+
+div.container.mt-2{
+    padding: 38px;
+    margin-bottom: -18px;
+    border-radius: 12px;
+}
+.verify{
+    
    
+    position: absolute;
+    top: 62rem;
+    left: 64rem;
+    width: 100%;
+   
+
+    
+   
+    
+    
+    
+
 }
 
-.chatbox :hover{
-    width:6rem;
+.nmb{
+    position: absolute;
+    top: 66rem;
+    left: 64rem;
+    width: 100%;
+    
+    
+    
+    
+    
 }
-
-button {
+.btn1{
+    background-color:  #15538D;
     border: none;
-}
-
-button:hover {
-    cursor: pointer;    
-}
-
-a {
+    color: white;
+    padding:14px 56px ; 
+    margin-left: 50px;
+    text-align: center;
     text-decoration: none;
-    color: black;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 59rem;
+    left: 60rem;
+    border-radius: 12px;
+    
+}
+.btn2{
+    position: absolute;
+    background-color:  #15538D;
+    border: none;
+    color: white;
+    padding:14px 56px;
+    margin-left: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    top: 54rem;
+    left: 60rem;
+    border-radius: 12px;
+}
+.div#livealertplaceholder{
+    position: absolute;
+    top: 144%;
+    left: 65%;
+}
+h5.OTP{
+    margin-left: -72px;
+    font-size: 1rem;
 }
