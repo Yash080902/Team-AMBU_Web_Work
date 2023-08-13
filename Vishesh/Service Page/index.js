@@ -1,170 +1,225 @@
+// Note - to see rotating image uncomment "rotating img trial" code
+
 // to make navbar size change on scroll
 
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function () {
+    scrollFunction();
+};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-    document.getElementById("navbar").style.height = "3.4vw";
-    document.getElementById("logo1").style.height = "3.8vw";
-
-  } else {
-    document.getElementById("navbar").style.height = "4vw";
-    document.getElementById("logo1").style.height = "4.5vw";
-
-  }
+    if (
+        document.body.scrollTop > 40 ||
+        document.documentElement.scrollTop > 40
+    ) {
+        document.getElementById("navbar").style.height = "3.4vw";
+        document.getElementById("logo1").style.height = "3.8vw";
+    } else {
+        document.getElementById("navbar").style.height = "4vw";
+        document.getElementById("logo1").style.height = "4.5vw";
+    }
 }
-
 
 // to make ham menu responsive
 
-const toggleBtn = document.querySelector('.toggle_btn')
-const toggleBtnIcon = document.querySelector('.toggle_btn i')
-const dropDownMenu = document.querySelector('.dropdown_menu')
+const toggleBtn = document.querySelector(".toggle_btn");
+const toggleBtnIcon = document.querySelector(".toggle_btn i");
+const dropDownMenu = document.querySelector(".dropdown_menu");
 
-toggleBtn.onclick = function () {
-  dropDownMenu.classList.toggle('open')
-  const isOpen = dropDownMenu.classList.contains('open')
+toggleBtn.addEventListener("click", () => {
+    dropDownMenu.classList.toggle("open");
+    const isOpen = dropDownMenu.classList.contains("open");
 
-  toggleBtnIcon.classList = isOpen
-    ? "fa-solid fa-xmark"
-    : "fa-solid fa-bars"
-}
-
+    toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+});
 
 // js to change content of types of ambulance detail box
 
-let alsAmbulanceImg = document.querySelector(".ALS-ambulance-img")
-let blsAmbulanceImg = document.querySelector(".BLS-ambulance-img")
-let ptsAmbulanceImg = document.querySelector(".PTS-ambulance-img")
-let maAmbulanceImg = document.querySelector(".MA-ambulance-img")
-let ambulanceDetailH1 = document.querySelector(".ambulance-detail-h1")
-let selectedAmbulanceOuterImg = document.querySelector(".selected-ambulance-outer-img")
-let selectedAmbulanceInnerImg = document.querySelector(".selected-ambulance-inner-img")
-let selectedAmbulanceDetailP = document.querySelector(".selected-ambulance-detail-p")
-let selectedAmbulanceFeatureImg = document.querySelectorAll(".selected-ambulance-feature-img")
-let selectedAmbulanceFeatureP = document.querySelectorAll(".selected-ambulance-feature-p")
+// making an array of objects that contain all ambulance data
 
+let ambulancesList = [
+    {
+        name: "ALS",
+        fullName: "Advance Life Support",
+        detail: `Large vehicle <br>
+        Advance Life Support is used for critical
+        patients`,
+        features: [
+            "Defibrillator",
+            "Medicines",
+            "Stretcher",
+            "Nurse",
+            "Bandages",
+            "Oxygen Supply",
+        ],
+    },
+    {
+        name: "BLS",
+        fullName: "Basic Life Support",
+        detail: `Basic vehicle <br>
+        Basic Life Support is used to provide Basic support`,
+        features: [
+            "Medicines",
+            "Stretcher",
+            "Nurse",
+            "Bandages",
+            "Oxygen Supply",
+            "Defibrillator",
+        ],
+    },
+    {
+        name: "PTS",
+        fullName: "Patient Transport Service",
+        detail: `Medium vehicle <br>
+        Patient Transport Service is used for transporting patients`,
+        features: [
+            "Stretcher",
+            "Nurse",
+            "Bandages",
+            "Oxygen Supply",
+            "Defibrillator",
+            "Medicines",
+        ],
+    },
+    {
+        name: "MA",
+        fullName: "Medium vehicle",
+        detail: `Medium vehicle <br>
+        MA is used for transporting patients`,
+        features: [
+            "Nurse",
+            "Bandages",
+            "Oxygen Supply",
+            "Defibrillator",
+            "Medicines",
+            "Stretcher",
+        ],
+    },
 
+    // rotating img trial
 
+    // {
+    //     name: "PA",
+    //     fullName: "Medium vehicle",
+    //     detail: `Medium vehicle <br>
+    //   MA is used for transporting patients`,
+    //     features: [
+    //         "Nurse",
+    //         "Bandages",
+    //         "Oxygen Supply",
+    //         "Defibrillator",
+    //         "Medicines",
+    //         "Stretcher",
+    //     ],
+    // },
+];
 
+// converting data to html and adding it to js-ambulance-list class element
 
+let ambulanceHTML = "";
 
-alsAmbulanceImg.onclick = () => {
-    // changing background
-    ptsAmbulanceImg.style.background = "none"
-    maAmbulanceImg.style.background = "none"
-    blsAmbulanceImg.style.background = "none"
-    alsAmbulanceImg.style.background = "linear-gradient(135deg, #0092ee 0%, #203381 100%)"
-    ambulanceDetailH1.textContent = "Advance Life Support"
-    selectedAmbulanceOuterImg.src = "./images/type of ambulances (ALS).png" 
-    selectedAmbulanceInnerImg.src = "./images/TYPES OF AMBULANCE inner ALS 1.png"
-    selectedAmbulanceDetailP.textContent = `Large vehicle
-    Advance Life Support is used for critical patients`
-    selectedAmbulanceFeatureImg[0].src = "./images/FEATURES 1.png"
-    selectedAmbulanceFeatureP[0].textContent = "Defibrillator"
-    selectedAmbulanceFeatureImg[1].src = "./images/FEATURES 2.png"
-    selectedAmbulanceFeatureP[1].textContent = "Medicines"
-    selectedAmbulanceFeatureImg[2].src = "./images/FEATURES 3.png"
-    selectedAmbulanceFeatureP[2].textContent = "Stretcher"
-    selectedAmbulanceFeatureImg[3].src = "./images/FEATURES 4.png"
-    selectedAmbulanceFeatureP[3].textContent = "Nurse"
-    selectedAmbulanceFeatureImg[4].src = "./images/FEATURES 5.png"
-    selectedAmbulanceFeatureP[4].textContent = "Bandages"
-    selectedAmbulanceFeatureImg[5].src = "./images/FEATURES 6.png"
-    selectedAmbulanceFeatureP[5].textContent = "Oxygen support"
+// to convert it to html
 
+ambulancesList.forEach((ambulance) => {
+    ambulanceHTML += `<figure class="ambulances-img js-ambulance" data-name="${ambulance.name}" >
+  <abbr title="${ambulance.name}">
+    <img src="images/ambulance/${ambulance.name}.png" alt="${ambulance.name} Ambulance image" class="ambulance-img ${ambulance.name}-ambulance-img">
+  </abbr>
+  <abbr title="${ambulance.name}">
+    <figcaption class="ambulance-img-figcaption">${ambulance.name}</figcaption>
+  </abbr>
+  </figure>
+  `;
+});
 
+// to display in on webpage
+document.querySelector(".js-ambulance-list").innerHTML = ambulanceHTML;
 
+document.querySelector(".ALS-ambulance-img").style.background =
+    "linear-gradient(135deg, #0092ee 0%, #203381 100%)";
 
+// adding click functionality to all ambulance
 
-}
+document.querySelectorAll(".js-ambulance").forEach((ambulance) => {
+    ambulance.addEventListener("click", () => {
+        // js that change background color of selected ambulance by setting bgc of selected ambulance and removing from other
+        ambulancesList.forEach((ambulance) => {
+            // creating a name variable that store class name from which we need to remove bgc
+            const name = "." + ambulance.name + "-ambulance-img";
+            document.querySelector(name).style.background = "none";
 
-blsAmbulanceImg.onclick = () => {
-    alsAmbulanceImg.style.background = "none"
-    ptsAmbulanceImg.style.background = "none"
-    maAmbulanceImg.style.background = "none"
-    blsAmbulanceImg.style.background = "linear-gradient(135deg, #0092ee 0%, #203381 100%)"
-    ambulanceDetailH1.textContent = "Basic Life Support"
-    selectedAmbulanceOuterImg.src = "./images/TYPES OF AMBULANCE (BLS).png" 
-    selectedAmbulanceInnerImg.src = "./images/TYPES OF AMBULANCE inner ALS 1.png"
-    selectedAmbulanceDetailP.textContent = `Basic vehicle
-    Basic Life Support is used to provide Basic support`
+            // rotating img trial
 
-    selectedAmbulanceFeatureImg[0].src = "./images/FEATURES 6.png"
-    selectedAmbulanceFeatureP[0].textContent = "Oxygen support"
-    selectedAmbulanceFeatureImg[1].src = "./images/FEATURES 1.png"
-    selectedAmbulanceFeatureP[1].textContent = "Defibrillator"
-    selectedAmbulanceFeatureImg[2].src = "./images/FEATURES 2.png"
-    selectedAmbulanceFeatureP[2].textContent = "Medicines"
-    selectedAmbulanceFeatureImg[3].src = "./images/FEATURES 3.png"
-    selectedAmbulanceFeatureP[3].textContent = "Stretcher"
-    selectedAmbulanceFeatureImg[4].src = "./images/FEATURES 4.png"
-    selectedAmbulanceFeatureP[4].textContent = "Nurse"
-    selectedAmbulanceFeatureImg[5].src = "./images/FEATURES 5.png"
-    selectedAmbulanceFeatureP[5].textContent = "Bandages"
-    
+            // const image = "." + ambulance.name + "-ambulance-img";
+            // document.querySelector(
+            //     image
+            // ).src = `images/ambulance/${ambulance.name}.png`;
+        });
 
+        // creating a name variable that store class name from which we need to add bgc
+        const name = "." + `${ambulance.dataset.name}` + "-ambulance-img";
+        document.querySelector(name).style.background =
+            "linear-gradient(135deg, #0092ee 0%, #203381 100%)";
 
+        // rotating img trial
 
+        // const image = "." + `${ambulance.dataset.name}` + "-ambulance-img";
+        // console.log(image);
+        // document.querySelector(
+        //     image
+        // ).src = `images/ambulance/${ambulance.dataset.name}.gif`;
 
+        ambulancesList.forEach((ambulances) => {
+            // checking which ambulance is selected
+            if (ambulances.name === ambulance.dataset.name) {
+                // creating html of selected ambulance
 
-}
+                // creating html of features of selected ambulance
 
-ptsAmbulanceImg.onclick = () => {
-    alsAmbulanceImg.style.background = "none"
-    maAmbulanceImg.style.background = "none"
-    blsAmbulanceImg.style.background = "none"
-    ptsAmbulanceImg.style.background = "linear-gradient(135deg, #0092ee 0%, #203381 100%)"
-    ambulanceDetailH1.textContent = "Patient Transport Service"
-    selectedAmbulanceOuterImg.src = "./images/TYPES OF AMBULANCE (PTS).png" 
-    selectedAmbulanceInnerImg.src = "./images/TYPES OF AMBULANCE inner ALS 1.png"
-    selectedAmbulanceDetailP.textContent = `Medium vehicle
-    Patient Transport Service is used for transporting patients`
+                let featuresHTML = "";
+                ambulances.features.forEach((feature) => {
+                    featuresHTML += `<abbr title="Ambulance Features">
+                <figure class="selected-ambulance-features">
+                  <img src="images/ambulance/features/${
+                      ambulances.name
+                  }/FEATURES ${
+                        ambulances.features.indexOf(feature) + 1
+                    }.png" alt="" class="selected-ambulance-feature-img">
+                  <p class="selected-ambulance-feature-p">${feature}</p>
+                </figure>
+              </abbr>`;
+                });
 
-    selectedAmbulanceFeatureImg[0].src = "./images/FEATURES 5.png"
-    selectedAmbulanceFeatureP[0].textContent = "Bandages"
-    selectedAmbulanceFeatureImg[1].src = "./images/FEATURES 6.png"
-    selectedAmbulanceFeatureP[1].textContent = "Oxygen support"
-    selectedAmbulanceFeatureImg[2].src = "./images/FEATURES 1.png"
-    selectedAmbulanceFeatureP[2].textContent = "Defibrillator"
-    selectedAmbulanceFeatureImg[3].src = "./images/FEATURES 2.png"
-    selectedAmbulanceFeatureP[3].textContent = "Medicines"
-    selectedAmbulanceFeatureImg[4].src = "./images/FEATURES 3.png"
-    selectedAmbulanceFeatureP[4].textContent = "Stretcher"
-    selectedAmbulanceFeatureImg[5].src = "./images/FEATURES 4.png"
-    selectedAmbulanceFeatureP[5].textContent = "Nurse"
-    
-    
-
-
-
-
-}
-
-maAmbulanceImg.onclick = () => {
-    alsAmbulanceImg.style.background = "none"
-    ptsAmbulanceImg.style.background = "none"
-    blsAmbulanceImg.style.background = "none"
-    maAmbulanceImg.style.background = "linear-gradient(135deg, #0092ee 0%, #203381 100%)"
-    ambulanceDetailH1.textContent = "Advance Life Support"
-    selectedAmbulanceOuterImg.src = "./images/TYPES_OF_AMBULANCE__MA_.png" 
-    selectedAmbulanceInnerImg.src = "./images/TYPES OF AMBULANCE inner ALS 1.png"
-    selectedAmbulanceDetailP.textContent = `Medium vehicle` + String.fromCharCode(10) + `MA is used for transporting patients`
-
-    selectedAmbulanceFeatureImg[0].src = "./images/FEATURES 4.png"
-    selectedAmbulanceFeatureP[0].textContent = "Nurse"
-    selectedAmbulanceFeatureImg[1].src = "./images/FEATURES 5.png"
-    selectedAmbulanceFeatureP[1].textContent = "Bandages"
-    selectedAmbulanceFeatureImg[2].src = "./images/FEATURES 6.png"
-    selectedAmbulanceFeatureP[2].textContent = "Oxygen support"
-    selectedAmbulanceFeatureImg[3].src = "./images/FEATURES 1.png"
-    selectedAmbulanceFeatureP[3].textContent = "Defibrillator"
-    selectedAmbulanceFeatureImg[4].src = "./images/FEATURES 2.png"
-    selectedAmbulanceFeatureP[4].textContent = "Medicines"
-    selectedAmbulanceFeatureImg[5].src = "./images/FEATURES 3.png"
-    selectedAmbulanceFeatureP[5].textContent = "Stretcher"
-    
-
-
-
-}
+                // adding ambulance detail to ambulance-detail class
+                document.querySelector(".ambulance-detail").innerHTML = `
+                <article>
+        <!-- full name of ambulance -->
+        <h1 class="ambulance-detail-h1">${ambulances.fullName}</h1>
+        <!-- inner and outer images -->
+        <div class="selected-ambulance-img">
+          <figure class="selected-ambulance-outer-figure">
+            <img src="images/ambulance/${ambulances.name}.png" alt="" class="selected-ambulance-outer-img">
+          </figure>
+          <figure class="selected-ambulance-inner-figure">
+            <img src="images/ambulance/inner-${ambulances.name}.png" alt="" class="selected-ambulance-inner-img">
+          </figure>
+        </div>
+        <!-- ambulance detail paragraph -->
+        <div class="selected-ambulance-detail">
+          <p class="selected-ambulance-detail-p">${ambulances.detail} </p>
+        </div>
+        
+        
+        <!-- ambulance features -->
+        
+        <!-- ambulance feature 1 -->
+        <div class="selected-ambulance-features-div">
+          
+        ${featuresHTML}
+        
+        </div>
+        </article>
+                `;
+            }
+        });
+    });
+});

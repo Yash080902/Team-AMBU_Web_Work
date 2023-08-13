@@ -143,6 +143,7 @@ header {
     border-width: 0.125vw;
     border-style: solid;
     border-color: rgb(129, 129, 191);
+    cursor: pointer;
 }
 
 .toggle_btn {
@@ -309,6 +310,7 @@ main {
     text-align: center;
     font-size: 2vw;
     font-weight: 700;
+    cursor: pointer;
 }
 .ambulance-img {
     width: 12vw;
@@ -375,6 +377,7 @@ main {
     padding: 2vw;
 
     background-color: #fff;
+    cursor: pointer;
 }
 
 /* selected ambulance feature images style */
@@ -436,6 +439,13 @@ main {
 
 .how-it-works-figcaption {
     font-size: 1vw;
+}
+
+.down-arrow {
+    position: absolute;
+    left: 90%;
+    top: 58%;
+    height: 6vw;
 }
 
 /* quote styling */
@@ -516,6 +526,16 @@ main {
     .customer-support-figcaption {
         font-size: 2vw;
     }
+    .underline {
+        background-size: 30% 5px;
+    }
+    .down-arrow {
+        rotate: -25deg;
+        left: 87%;
+
+        top: 47%;
+        height: 10vw;
+    }
 }
 
 /* 
@@ -533,11 +553,17 @@ main {
     }
 
     .underline {
-        background-size: 30% 4px;
+        background-size: 30% 3px;
     }
 
     .selected-ambulance-feature-p {
         font-size: 1.5vw;
+    }
+    .down-arrow {
+        rotate: -25deg;
+        left: 87%;
+        top: 45%;
+        height: 10vw;
     }
 }
 /* Box animation that is used in social media profile and icons */
